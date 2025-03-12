@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <script>
+        function loadUser() {
+            var username = localStorage.getItem("username");
+            document.getElementById("welcome-message").innerText = "HELLO        " + username;
+        }
+    </script>
+</head>
+<body onload="loadUser()">
+    <h1 id="welcome-message"></h1>
+    <button onclick="window.location.href='Login.html'">to_LoginPage </button>
+</body>
+</html>
