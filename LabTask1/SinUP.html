@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form>
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="firstname" required /></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="lastname" required /></td>
+            </tr>
+            <tr>
+                <td>ID:</td>
+                <td><input type="number" name="id" required /></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email" required /></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password" required /></td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" name="dob" required /></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="male" required /> Male
+                    <input type="radio" name="gender" value="female" required /> Female
+                    <input type="radio" name="gender" value="other" required /> Other
+                </td>
+            </tr>
+            <tr>
+                <td>Skills:</td>
+                <td>
+                    <input type="checkbox" name="skills" value="programming" /> Programming
+                    <input type="checkbox" name="skills" value="design" /> Design
+                    <input type="checkbox" name="skills" value="management" /> Management
+                </td>
+            </tr>
+            <tr>
+                <td>Department:</td>
+                <td>
+                    <select name="department" required>
+                        <option value="">Select Department</option>
+                        <option value="IT">IT</option>
+                        <option value="HR">HR</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Marketing">Marketing</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <button onclick="window.location.href='Login.html'">REGISTER </button>
+                </td>
+            </tr>
+        </table>
+    </form>
+   
+</body>
+</html>
