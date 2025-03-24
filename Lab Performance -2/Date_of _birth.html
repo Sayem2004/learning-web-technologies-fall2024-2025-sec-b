@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Date of Birth Validation</title>
+</head>
+<body>
+    <h1>Date of Birth Validation</h1>
+
+    <form onsubmit="return validateDOB()">
+        <fieldset>
+            <legend>Date of Birth</legend>
+            <input type="text" id="day" placeholder="dd" size="2"> /
+            <input type="text" id="month" placeholder="mm" size="2"> /
+            <input type="text" id="year" placeholder="yyyy" size="4">
+        </fieldset>
+
+        <p id="dobMsg" style="color: red;"></p>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateDOB() {
+            let day = document.getElementById('day').value.trim();
+            let month = document.getElementById('month').value.trim();
+            let year = document.getElementById('year').value.trim();
+            let msg = document.getElementById('dobMsg');
+
+            if (day === "" || month === "" || year === "") {
+                msg.innerHTML = "Date of birth cannot be empty.";
+                return false;
+            }
+
+            day = parseInt(day);
+            month = parseInt(month);
+            year = parseInt(year);
+
+            if (isNaN(day) || isNaN(month) || isNaN(year) ||
+                day < 1 || day > 31 || month < 1 || month > 12 || 
+                year < 1900 || year > 2016) {
+                msg.innerHTML = "Please enter a valid date (dd: 1-31, mm: 1-12, yyyy: 1900-2016).";
+                return false;
+            }
+
+            msg.innerHTML = "";
+            return true;
+        }
+    </script>
+</body>
+</html>
